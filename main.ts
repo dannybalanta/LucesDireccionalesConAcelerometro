@@ -1,5 +1,6 @@
 input.onGesture(Gesture.Shake, function () {
     for (let index = 0; index < 4; index++) {
+        basic.pause(200)
         basic.showLeds(`
             . . . . .
             . . . . .
@@ -15,6 +16,7 @@ input.onGesture(Gesture.Shake, function () {
             . . # . .
             . . # . .
             `)
+        basic.pause(200)
     }
     basic.clearScreen()
 })
@@ -82,5 +84,13 @@ basic.forever(function () {
             basic.pause(200)
         }
         basic.clearScreen()
+    } else {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . # . .
+            `)
     }
 })
