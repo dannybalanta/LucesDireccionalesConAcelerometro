@@ -1,19 +1,22 @@
 input.onGesture(Gesture.Shake, function () {
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . # . .
-        . # # # .
-        # # # # #
-        `)
-    basic.pause(1000)
-    basic.showLeds(`
-        . . # . .
-        . # # # .
-        # # # # #
-        . . # . .
-        . . # . .
-        `)
+    for (let index = 0; index < 4; index++) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . # # # .
+            # # # # #
+            `)
+        basic.pause(200)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            . . # . .
+            `)
+    }
+    basic.clearScreen()
 })
 basic.forever(function () {
     if (input.buttonIsPressed(Button.AB)) {
@@ -77,6 +80,6 @@ basic.forever(function () {
             basic.pause(200)
         }
     } else {
-        basic.clearScreen()
+    	
     }
 })
