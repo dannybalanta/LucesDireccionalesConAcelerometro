@@ -85,12 +85,6 @@ basic.forever(function () {
         }
         basic.clearScreen()
     } else {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . # . .
-            `)
+    	
     }
 })
